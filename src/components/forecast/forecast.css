@@ -1,0 +1,88 @@
+.title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+.daily-header {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+.daily-item, .daily-item-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    margin: .5em;
+    margin-left: 2em;
+    padding: 0 1em;
+    border-radius: .5em;
+    box-shadow: 5px -2px 10px 2px rgb(0 0 0 / 5%);
+}
+
+.daily-item p{
+    font-size: 1.25rem;
+    width: 100%;
+}
+
+.daily-item .time {
+    font-weight: 500;
+}
+.daily-item .icon-small {
+    max-width: 75px;
+}
+
+.daily-item .temperature {
+    letter-spacing: 0;
+}
+
+.daily-item .weather-description,
+.daily-item .preciptation,
+.daily-item .winds {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.daily-item .winds {
+    padding-left: 2em;
+}
+
+.daily-item svg, .daily-item-grid svg {
+    overflow: visible;
+    max-width: 20px;
+    max-height: 20px;
+    fill: #1b4de4;
+    color: #1b4de4;
+    margin-right: .25em;
+}
+
+.daily-item-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5em;
+
+    
+}
+.daily-item-grid>div{
+    display: flex;
+    flex-direction: row;
+    width:auto 50%;
+}
+.daily-item-grid .feels_like,
+.daily-item-grid .humidity {
+    display: flex;
+    flex-direction: row;
+}
+
+.daily-item-grid .icon-small {
+    max-width: 50px;
+    max-height: 50px;
+}
+.daily-item-grid svg {
+    max-width: 50px;
+    max-height: 50px;
+}
+.daily-item-grid p {
+    width: 1100%;
+}
