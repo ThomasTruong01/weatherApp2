@@ -1,6 +1,6 @@
 import './App.css';
 import CurrentWeather from './components/currentWeather/currentWeather';
-import Forecast from "./components/forecast/forecast";
+import Forecast from "./components/forecast/forecast2";
 import Search from './components/search/search';
 import { WEATHER_API_KEY, WEATHER_API_URL } from "./components/api";
 import { useState } from 'react';
@@ -25,7 +25,6 @@ function App() {
         setForecastWeather({city: searchData.label, ...forecastResponse});
       })
       .catch(err => console.log(err));
-      console.log('app forecast', forecastWeather)
   }
   
 

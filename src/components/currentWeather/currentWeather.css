@@ -33,7 +33,7 @@
   width: 100px;
 }
 
-.temperature {
+.weather .temperature {
   font-weight: 600;
   font-size: 70px;
   width: auto;
