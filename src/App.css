@@ -1,4 +1,7 @@
-.container {
-  max-width: 992px;
-  margin: 4em auto;
+body {
+  background: url(../public/25501.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+#root {
+  margin-top: 2em;
 }

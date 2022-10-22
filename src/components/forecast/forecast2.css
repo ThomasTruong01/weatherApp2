@@ -1,0 +1,148 @@
+.title {
+    color:#ffffff;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+.accordion-header .accordion-button::after {
+    margin-left: 1em;
+}
+.daily-header {
+    color:#ffffff;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+.daily-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.daily-item p{
+    font-size: 1.25rem;
+    width: 100%;
+    margin: 0;
+}
+
+.daily-item .time {
+    margin: auto 0;
+    font-weight: 500;
+}
+.daily-item .icon-small {
+    max-width: 40px;
+}
+
+.daily-item .temperature p {
+    font-size: 2rem;
+    letter-spacing: 0;
+}
+.weather-item.winds {
+    display: none;
+}
+.daily-item-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.daily-item-detail div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.daily-item-detail.winds span {
+    font-size: 12px;
+}
+
+.daily-item svg, .hourly-item-grid svg {
+    max-width: 40px;
+    max-height: 40px;
+    overflow: visible;
+    fill: #1b4de4;
+    color: #1b4de4;
+    margin-right: .25em;
+}
+.accordion-item {
+    margin-left: 2em;
+}
+.hourly-item-grid {
+    grid-row-gap: 0;
+    grid-column-gap: 15px;
+    row-gap: 0;
+    column-gap: 15px;
+    display: grid;
+    flex: 1 1;
+    grid-template-columns: auto auto;
+    padding: 5px 15px;
+    background-color: #ffffff;
+    margin: 0 .5em .5em 2em;
+    border-radius: 0 0 .5em .5em;
+}
+.hourly-item-grid>div{
+    display: flex;
+    flex-direction: row;
+    width:auto 50%;
+}
+
+.hourly-item-grid .icon-small {
+    max-width: 50px;
+    max-height: 50px;
+}
+.weather-item svg {
+    max-width: 40px;
+    max-height: 40px;
+}
+.weather-item svg[name='precip-rain'] {
+    max-height: 30px;
+    max-width: 30px;
+}
+.hourly-item-grid p {
+    width: 100%;
+}
+.weather-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.weather-item-title {
+    font-size: 10px;
+    margin-bottom: 0;
+    text-align: center;
+}
+.weather-item-data {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+/*  X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) { 
+    .hourly-item-grid {
+        grid-template-columns: auto;
+    }
+ }
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) { 
+    .daily-item-detail.winds {
+        display: none;
+    }
+    .daily-item-detail.weather-description .icon-small {
+        max-width: 75px;
+    }
+    .daily-item-detail.weather-description p{
+        display: none;
+    }
+    .weather-item.winds {
+        display: flex;
+    }
+ }
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 992px) { 
+    .accordion-item {
+        margin-left: 0;
+    }
+ }
