@@ -26,7 +26,6 @@ const MONTH = [
 ];
 
 const Forecast = ({ data }) => {
-  console.log("forecast data", data.list);
 
   const getDayOfWeek = (dt) => {
     const date = new Date(dt);
@@ -66,9 +65,7 @@ const Forecast = ({ data }) => {
     const time = getTime(dt);
     const date = getDayFromTimestamp(dt);
 
-    if (time === "12:00 am" || idx === 0) {
-      console.log(true, time);
-
+    if (time === "12 am" || idx === 0) {
       return (
         <div className="daily-header">
           <p>{date}</p>
@@ -106,7 +103,7 @@ const Forecast = ({ data }) => {
         {data.list.map((item, idx) => {
           const time = getTime(item.dt_txt);
           return (
-            <>
+            <div key={idx}>
                   {getDate(item.dt_txt, idx)}
             <Accordion.Item eventKey={idx}>
                 <Accordion.Header>
@@ -132,7 +129,7 @@ const Forecast = ({ data }) => {
                       <label className="weather-item-title">Preciptation</label>
                       <div>
                         <svg className="icon-small" set="heads-up" name="precip-rain-single" theme="action" data-testid="Icon" aria-hidden="false" aria-label="Chance of Rain" role="img" viewBox="0 -2 5 10" ><title>Rain</title><path d="M4.7329.0217c-.1848-.059-.3855.0064-.4803.148L.2731 5.1191c-.0814.0922-.1501.1961-.196.3108-.2469.6009.1185 1.2697.8156 1.4943.6914.226 1.447-.0712 1.7-.6585L4.9662.4987l.0111-.0282c.073-.1807-.036-.379-.2444-.4488z"></path></svg>
-                        <p>{item.pop * 100}%</p>
+                        <p>{Math.round(item.pop*100)}%</p>
                       </div>
                     </div>
                     <div className="daily-item-detail winds">
@@ -184,7 +181,7 @@ const Forecast = ({ data }) => {
                 </div>
               </Accordion.Body>
             </Accordion.Item>
-            </>
+            </div>
           );
         })}
       </Accordion>
