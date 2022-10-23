@@ -107,8 +107,8 @@ const Forecast = ({ data }) => {
       <label className="title">Hourly Forecast </label>
       <Accordion defaultActiveKey="0">
         {data.list.map((item, idx) => {
-          const time = getTime(item.dt_txt);
-          const dt = formatDate(item.dt_txt);
+          const dt = formatDate(dt);
+          const time = getTime(dt);
           return (
             <div key={idx}>
                   {getDate(dt, idx)}
