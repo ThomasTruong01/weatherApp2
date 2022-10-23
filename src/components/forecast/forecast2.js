@@ -75,6 +75,12 @@ const Forecast = ({ data }) => {
     return;
   };
 
+  const formatDate = dt => {
+    const t = dt.split(/[- :]/);
+    const d = new Date(t[0], t[1]-1, t[2], t[3], t[4], t[5])
+    return d;
+  }
+
   const getWindDirection = (deg) => {
     if (deg >= 338 || deg < 23) {
       return "S";
@@ -102,9 +108,10 @@ const Forecast = ({ data }) => {
       <Accordion defaultActiveKey="0">
         {data.list.map((item, idx) => {
           const time = getTime(item.dt_txt);
+          const dt = formatDate(item.dt_txt);
           return (
             <div key={idx}>
-                  {getDate(item.dt_txt, idx)}
+                  {getDate(dt, idx)}
             <Accordion.Item eventKey={idx}>
                 <Accordion.Header>
 
