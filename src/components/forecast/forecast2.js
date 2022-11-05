@@ -128,7 +128,7 @@ const Forecast = ({ data }) => {
                     <div className="daily-item-detail weather-description">
                       <label className="weather-item-title">Conditions</label>
                       <div>
-                        <img alt="weather" className="icon-small" src={`icons/${item.weather[0].icon}.png`} />{" "}
+                        <img alt="weather" className="icon-small" src={`images/icons/${item.weather[0].icon}.png`} />{" "}
                         <p>{item.weather[0].main}</p>
                       </div>
                     </div>
