@@ -83,21 +83,21 @@ const Forecast = ({ data }) => {
 
   const getWindDirection = (deg) => {
     if (deg >= 338 || deg < 23) {
-      return "S";
-    } else if (deg >= 23 && deg < 68) {
-      return "SW";
-    } else if (deg >= 68 && deg < 113) {
-      return "W";
-    } else if (deg >= 113 && deg < 158) {
-      return "NW";
-    } else if (deg >= 158 && deg < 203) {
       return "N";
-    } else if (deg >= 203 && deg < 248) {
+    } else if (deg >= 23 && deg < 68) {
       return "NE";
-    } else if (deg >= 248 && deg < 293) {
+    } else if (deg >= 68 && deg < 113) {
       return "E";
-    } else if (deg >= 293 && deg < 338) {
+    } else if (deg >= 113 && deg < 158) {
       return "SE";
+    } else if (deg >= 158 && deg < 203) {
+      return "S";
+    } else if (deg >= 203 && deg < 248) {
+      return "SW";
+    } else if (deg >= 248 && deg < 293) {
+      return "W";
+    } else if (deg >= 293 && deg < 338) {
+      return "NW";
     } else {
       return deg;
     }
